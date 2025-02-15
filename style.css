@@ -1,0 +1,156 @@
+/* ==============================
+TWG CODE GAME v1.0 | 14.02.25
+License: none (public domain)
+Developed By : Jame's Madison
+============================== */
+
+html, body {
+    background: #FFFEF2;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+.main-wrapper {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 20px; /* Prevent logo clipping */
+}
+
+/* Logo */
+.logo-block {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    max-width: 100%;
+}
+
+/* Game Content */
+.content-holder {
+    display: flex;
+    padding: 4px;
+    border: 3px solid #262626;
+    border-radius: 8px;
+}
+
+.content-holder-two {
+    border: 1px solid #262626;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.game-question-block {
+    text-align: center;
+    margin: 18px 18px 0px 18px;
+}
+
+.result-block {
+    height: 20px;
+    text-align: center;
+}
+
+.divider {
+    margin-top: 8px;
+    border-top: solid 1px;
+}
+
+.answer-block {
+    padding: 16px;
+}
+
+/* Buttons */
+.button, .button-two {
+    color: #262626;
+    border-radius: 100px;
+    width: 100%;
+    border: solid 1px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 14px 16px; /* Increased padding */
+    background-color: #FFFEF2;
+    transition: background-color 0.3s;
+    margin-top: 8px; /* Added spacing between buttons */
+}
+.button:first-child {
+    margin-top: 0; /* Ensures first button doesn’t get extra spacing */
+}
+
+.button:focus, .button:hover,
+.button-two:focus, .button-two:hover {
+    outline: none;
+    background-color: #D7C9A2;
+}
+
+/* Game Info & Panel */
+.game-info, .game-panel {
+    padding: 16px;
+    border: 1px solid #2F353E;
+    font-size: 10px;
+}
+
+.spacer-zero {
+    height: 16px;
+}
+
+/* Typography */
+@font-face {
+    font-family: 'font-1';
+    src: url('/PTSerif-Italic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'font-2';
+    src: url('/PTSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'font-3';
+    src: url('/PTSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'font-1', sans-serif;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.text-headline {
+    font-family: 'font-2';
+}
+.text-normal {
+    font-family: 'font-3';
+}
+
+/* Responsive Fixes */
+@media (max-width: 320px) {
+    .main-wrapper {
+        padding-top: 30px;
+    }
+
+    .logo-block {
+        padding-bottom: 20px;
+    }
+}
+
+
+
+
+#feedback {
+    font-family: 'font-1';
+    font-size: 10;
+}
