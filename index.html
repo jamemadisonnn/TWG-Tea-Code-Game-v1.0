@@ -101,12 +101,12 @@ function shuffle(array) {
 
 function provideHapticFeedback() {
     if ("vibrate" in navigator) {
-        navigator.vibrate(50); // Short vibration (50ms)
+        navigator.vibrate(50); 
     }
 }
 
 function loadQuestion() {
-    if (questions.length === 0) return; // Prevent errors if no questions are available
+    if (questions.length === 0) return;
 
     let newQuestionIndex;
     do {
@@ -141,7 +141,7 @@ function loadQuestion() {
     dontHaveButton.classList.add("button");
     dontHaveButton.onclick = () => {
         provideHapticFeedback();
-        handleAnswer(false, true); // Pass `true` to indicate "Don't Have" was chosen
+        handleAnswer(false, true); 
     };
     answersContainer.appendChild(dontHaveButton);
 }
@@ -151,14 +151,14 @@ function handleAnswer(isCorrect, isDontHave = false) {
 
     if (isDontHave) {
         feedback.innerText = "This question is skipped!";
-        feedback.style.color = "#ffa500"; // Orange for skipped
+        feedback.style.color = "#ffa500"; 
     } else {
         feedback.innerText = isCorrect ? "Correct!" : "Wrong!";
-        feedback.style.color = isCorrect ? "#4caf50" : "#ff4d4d"; // Green for correct, red for wrong
+        feedback.style.color = isCorrect ? "#4caf50" : "#ff4d4d";
     }
 
     feedback.style.opacity = 1;
-    setTimeout(loadQuestion, 500); // Load next question quickly
+    setTimeout(loadQuestion, 500); 
 }
 
 // Load the first question
